@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "images" # 图片会存放在仓库的 images 文件夹
+public_folder: "/images"
+collections:
+  - name: "homepage"
+    label: "Homepage Content"
+    files:
+      - label: "Home Page"
+        name: "index"
+        file: "index.html" # 绑定你的首页
+        fields:
+          - {label: "Headline", name: "headline", widget: "string"}
+          - {label: "Main Image", name: "image", widget: "image"}
+          - {label: "Weekday Price", name: "price_wd", widget: "number"}
